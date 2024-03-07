@@ -20,6 +20,16 @@ public class TextBasedAdventure {
         else if (input == 2) {
             goRight();
         }
+
+        else if (input == 31){
+
+            CheatCode();
+        }
+    }
+
+    public void CheatCode() {
+
+        System.out.println("You WIN! BYE BYE GO HOME!");
     }
 
     public void goLeft() {

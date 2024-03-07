@@ -13,7 +13,7 @@ public class TextBasedAdventure {
     }
 
     public void start() {
-        System.out.println("You find yourself in a large room. What would you like to do?\n1. Go left \n2. Go right \n3. Go hide in the corner");
+        System.out.println("You find yourself in a large room. What would you like to do?\n1. Go left \n2. Go right \n3. Go hide in the corner \n 4. DARK MEME");
         int input = keyboardInput.nextInt();
         if (input == 1) {
             goLeft();
@@ -29,6 +29,24 @@ public class TextBasedAdventure {
         else if (input == 3){
             System.out.println("Hey I know you are scared but let me help you out try typing in 31!");
             start();
+        }
+
+        else if (input == 4){
+            System.out.println("            _.------.                        .----.__\r\n" + //
+                                "           /         \\_.       ._           /---.__  \\\r\n" + //
+                                "          |  O    O   |\\\\___  //|          /       `\\ |\r\n" + //
+                                "          |  .vvvvv.  | )   `(/ |         | o     o  \\|\r\n" + //
+                                "          /  |     |  |/      \\ |  /|   ./| .vvvvv.  |\\\r\n" + //
+                                "         /   `^^^^^'  / _   _  `|_ ||  / /| |     |  | \\\r\n" + //
+                                "       ./  /|         | O)  O   ) \\|| //' | `^vvvv'  |/\\\\\r\n" + //
+                                "      /   / |         \\        /  | | ~   \\          |  \\\\\r\n" + //
+                                "      \\  /  |        / \\ Y   /'   | \\     |          |   ~\r\n" + //
+                                "       `'   |  _     |  `._/' |   |  \\     7        /\r\n" + //
+                                "         _.-'-' `-'-'|  |`-._/   /    \\ _ /    .    |\r\n" + //
+                                "    __.-'            \\  \\   .   / \\_.  \\ -|_/\\/ `--.|_\r\n" + //
+                                " --'                  \\  \\ |   /    |  |              `-\r\n" + //
+                                "                       \\uU \\UU/     |  /   :F_P:");
+    
         }
     }
 

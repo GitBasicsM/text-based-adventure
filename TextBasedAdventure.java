@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class TextBasedAdventure {
     boolean hasSword = false;
     boolean hasNerfGun = false;
+    boolean hasCutlas = false;
     Scanner keyboardInput = new Scanner(System.in);
 
     public void execute() {
@@ -62,7 +63,11 @@ public class TextBasedAdventure {
             hasNerfGun = true;
         System.out.println("Wow you picked up a NerfGun");
         }
-        else{
+        else if (!hasCutlas){
+            hasCutlas = true;
+            System.out.println("you picked up a shiny cutlas, it glimmers in the torchligh");
+           
+        } else{
             System.out.println("There is nothing here...");
         }
         start();
@@ -73,6 +78,8 @@ public class TextBasedAdventure {
             System.out.println("You defeat the giant with your sword and run out of the cave!");
         } else if (hasNerfGun) {
            System.out.println(" Your Nerf Elite Dart bounces off the Monsters chest, you get decapitated");
+        }else if (hasCutlas){
+            System.out.println("Oh no the cutlus wasn't sharpened, you die");
         }
         else{
             System.out.println("You get stomped by the giant and red stuff goes everywhere.");

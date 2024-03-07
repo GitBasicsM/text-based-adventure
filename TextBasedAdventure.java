@@ -57,7 +57,7 @@ public class TextBasedAdventure {
     }
 
     public void goLeft() {
-        System.out.println("Oh no! You run into a giant! Fight or flight?\n1. Fight \n2. Flight \n3. Quit");
+        System.out.println("Oh no! You run into a giant! Fight or flight?\n1. Fight \n2. Flight \n3. Quit \n4. Talk");
         int input = keyboardInput.nextInt();
         if (input == 1) {
             fight();
@@ -66,6 +66,10 @@ public class TextBasedAdventure {
             System.out.println("Wow you are such a baby, grow up!");
             start();
         }  
+        else if (input == 4) {
+            System.out.println("Yo can we just talk?");
+           fight();
+        }
         else{
             System.out.println("Damn you going to quit just like that???? get back in there!");
             goLeft();
@@ -103,6 +107,7 @@ public class TextBasedAdventure {
             System.out.println("You get stomped by the giant and red stuff goes everywhere.");
         }
     }
+
 
     public static void main(String[] args) {
         new TextBasedAdventure().execute();

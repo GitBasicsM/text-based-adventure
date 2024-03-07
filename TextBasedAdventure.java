@@ -13,7 +13,7 @@ public class TextBasedAdventure {
     }
 
     public void start() {
-        System.out.println("You find yourself in a large room. What would you like to do?\n1. Go left \n2. Go right");
+        System.out.println("You find yourself in a large room. What would you like to do?\n1. Go left \n2. Go right \n3. Go hide in the corner");
         int input = keyboardInput.nextInt();
         if (input == 1) {
             goLeft();
@@ -25,6 +25,10 @@ public class TextBasedAdventure {
         else if (input == 31){
 
             CheatCode();
+        }
+        else if (input == 3){
+            System.out.println("Hey I know you are scared but let me help you out try typing in 31!");
+            start();
         }
     }
 
@@ -71,11 +75,12 @@ public class TextBasedAdventure {
            System.out.println(" Your Nerf Elite Dart bounces off the Monsters chest, you get decapitated");
         }
         else{
-            System.out.println("You get stomped by the giant and red stuff goes everywhere.")
+            System.out.println("You get stomped by the giant and red stuff goes everywhere.");
         }
     }
 
     public static void main(String[] args) {
         new TextBasedAdventure().execute();
+    
     }
 }

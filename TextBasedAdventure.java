@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class TextBasedAdventure {
     boolean hasSword = false;
+    boolean hasNerfGun = false;
     Scanner keyboardInput = new Scanner(System.in);
 
     public void execute() {
@@ -38,8 +39,12 @@ public class TextBasedAdventure {
             System.out.println("You find a sword on the ground!");
             hasSword = true;
         }
-        else {
-            System.out.println("There's nothing here...");
+        else if (hasSword) {
+            hasNerfGun = true;
+        System.out.println("Wow you picked up a NerfGun");
+        }
+        else{
+            System.out.println("There is nothing here...");
         }
         start();
     }
@@ -47,8 +52,11 @@ public class TextBasedAdventure {
     public void fight() {
         if (hasSword) {
             System.out.println("You defeat the giant with your sword and run out of the cave!");
-        } else {
-            System.out.println("You get stomped by the giant and red stuff goes everywhere.");
+        } else if (hasNerfGun) {
+           System.out.println(" Your Nerf Elite Dart bounces off the Monsters chest, you get decapitated");
+        }
+        else{
+            System.out.println("You get stomped by the giant and red stuff goes everywhere.")
         }
     }
 

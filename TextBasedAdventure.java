@@ -23,14 +23,19 @@ public class TextBasedAdventure {
     }
 
     public void goLeft() {
-        System.out.println("Oh no! You run into a giant! Fight or flight?\n1. Fight \n2. Flight");
+        System.out.println("Oh no! You run into a giant! Fight or flight?\n1. Fight \n2. Flight \n3. Quit");
         int input = keyboardInput.nextInt();
         if (input == 1) {
             fight();
         }
         else if (input == 2) {
+            System.out.println("Wow you are such a baby, grow up!");
             start();
         }  
+        else{
+            System.out.println("Damn you going to quit just like that???? get back in there!");
+            goLeft();
+        }
     }
 
     public void goRight() {
